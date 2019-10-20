@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #333333;
+}
+
+.container {
+  background-color: #d4d1d1;
+  height: 90vh;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container h1 {
+  font-family: "Share Tech Mono", monospace;
+  margin-top: 3.5em;
+  cursor: pointer;
+  position: relative;
+}
+
+.left-right {
+  z-index: 1;
+}
+
+.left-right::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 0%;
+  height: 0.2em;
+  background-color: hotpink;
+  -webkit-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
+  opacity: 0;
+}
+
+.left-right:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.right-left {
+  z-index: 1;
+}
+
+.right-left::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 0%;
+  height: 0.2em;
+  background-color: hotpink;
+  -webkit-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
+  opacity: 0;
+}
+
+.right-left:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.outwards {
+  z-index: 1;
+}
+
+.outwards::before, .outwards::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 0%;
+  height: 0.2em;
+  background-color: hotpink;
+  -webkit-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
+  opacity: 0;
+}
+
+.outwards::before {
+  right: 50%;
+}
+
+.outwards::after {
+  left: 50%;
+}
+
+.outwards:hover::before, .outwards:hover::after {
+  width: 55%;
+  opacity: 1;
+}
+
+.inwards {
+  z-index: 1;
+}
+
+.inwards::before, .inwards::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 0%;
+  height: 0.2em;
+  background-color: hotpink;
+  -webkit-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
+  opacity: 0;
+}
+
+.inwards::before {
+  right: -10%;
+}
+
+.inwards::after {
+  left: -10%;
+}
+
+.inwards:hover::before, .inwards:hover::after {
+  width: 70%;
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

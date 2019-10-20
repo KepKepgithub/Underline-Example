@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap");
+//font-family: 'Share Tech Mono', monospace;
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #333333;
+}
+
+.container {
+  background-color: rgb(212, 209, 209);
+  height: 90vh;
+  width: 40%;
+
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-family: "Share Tech Mono", monospace;
+    margin-top: 3.5em;
+    cursor: pointer;
+    position: relative;
+  }
+}
+//**********************************************************
+.left-right {
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    z-index: -1;
+    width: 0%;
+    height: 0.2em;
+
+    background-color: hotpink;
+    transition: all 750ms ease-in-out;
+    opacity: 0;
+  }
+  &:hover::before {
+    width: 100%;
+    opacity: 1;
+  }
+}
+//**********************************************
+.right-left {
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    z-index: -1;
+    width: 0%;
+    height: 0.2em;
+
+    background-color: hotpink;
+    transition: all 750ms ease-in-out;
+    opacity: 0;
+  }
+  &:hover::before {
+    width: 100%;
+    opacity: 1;
+  }
+}
+//*************************************************************
+.outwards {
+  z-index: 1;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    z-index: -1;
+    width: 0%;
+    height: 0.2em;
+
+    background-color: hotpink;
+    transition: all 750ms ease-in-out;
+    opacity: 0;
+  }
+  &::before {
+    right: 50%;
+  }
+  &::after {
+    left: 50%;
+  }
+  &:hover::before,
+  &:hover::after {
+    width: 55%;
+    opacity: 1;
+  }
+}
+
+//***********************************************************************
+
+.inwards {
+  z-index: 1;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    z-index: -1;
+    width: 0%;
+    height: 0.2em;
+
+    background-color: hotpink;
+    transition: all 750ms ease-in-out;
+    opacity: 0;
+  }
+  &::before {
+    right: -10%;
+  }
+  &::after {
+    left: -10%;
+  }
+  &:hover::before,
+  &:hover::after {
+    width: 70%;
+    opacity: 1;
+  }
+}
